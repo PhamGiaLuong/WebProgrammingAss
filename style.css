@@ -1,0 +1,471 @@
+body {
+    padding-top: 65px;
+    font-family: 'Signika Negative', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: #222f3e;
+    /* background-color: red; */
+}
+
+a {
+    text-decoration: none;
+}
+
+.border-a {
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 20px;
+}
+.border-b {
+    color: black;
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.border-a:hover, .border-b:hover {
+    font-weight: bold;
+}
+
+/* Nút trở về đầu trang */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px; 
+    background-color: #222f3e;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    display: none;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.back-to-top:hover {
+    background-color: #576574;
+}
+
+/* Giới hạn văn bản hiển thị */
+.truncate-1 {
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    white-space: nowrap;   
+    max-height: 50px;  
+}
+
+.truncate-3 {
+    overflow: hidden;          
+    text-overflow: ellipsis;  
+    display: -webkit-box;
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical; 
+}
+
+/* -----------------------------------------------TAB ĐĂNG NHẬP/KÝ----------------------------------------------- */
+.signInTab{
+    background-image: url("/Assignment/1.png") ;
+    background-repeat: no-repeat;
+    height: 650px;
+    /* background-color: #010f11; */
+    background-size: contain;
+    background-position: center;
+}
+.signUpTab{
+    background-image: url("/Assignment/2.png") ;
+    background-repeat: no-repeat;
+    height: 650px;
+    /* background-color: #010f11; */
+    background-size: contain;
+    background-position: center;
+}
+
+.sign-box {
+    /* transform: translate(-50%, -50%); */
+    box-shadow: 0 15px 25px #222f3e;
+}
+
+.user-box {
+    position: relative;
+    font-family: 'Asap', sans-serif;
+}
+
+.user-box input {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    color: #222f3e;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #222f3e;
+    outline: none;
+    background: transparent;
+}
+
+.user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    color: #222f3e;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.user-box input:focus ~ label,
+.user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #222f3e;
+    font-size: 12px;
+}
+
+
+
+/* -----------------------------------------------TRANG CHỦ----------------------------------------------- */
+/* Come-in annimation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 2s ease-out, transform 2s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Navigation bar */
+.nbar {
+    background-color: #222f3e !important;
+    color: white !important;
+}
+
+.nlink {
+    color: white;
+}
+
+.nlink.active {
+    color: white !important;
+    background-color: #576574;
+    border-radius: 20px !important;
+}
+
+.offcanvas {
+    background-color: #222f3e;
+}
+
+.offcanvas-header h5 {
+    color: white;
+}
+
+.offcanvas-body .nav-link {
+    color: white !important;
+}
+
+.offcanvas-body .nav-link:hover {
+    font-weight: bold;
+}
+
+
+
+/* -----------------------------------------------SẢN PHẨM----------------------------------------------- */
+/* Cho bộ Lọc sản phẩm đứng yên */
+.sticky-filter {
+    position: sticky;
+    top: 0;
+    /* Đặt khoảng cách từ đầu phần tử cha */
+    background-color: white;
+    /* Nền trắng để nổi bật */
+    z-index: 1000;
+    /* Đảm bảo thẻ lọc nằm trên các phần tử khác */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Thêm bóng cho thẻ lọc */
+}
+
+.dropdown-toggle::after {
+    display: none !important;
+    /* Ẩn mũi tên chỉa xuống */
+}
+
+.product-image {
+    height: 400px; /* Chiều cao mặc định cho màn hình lớn */
+}
+
+/* Media query cho chiều cao 200px trên màn hình nhỏ */
+@media (max-width: 576px) {
+    .product-image {
+        height: 200px; /* Chiều cao cho màn hình nhỏ */
+    }
+}
+
+#carouselIntroduction {
+    height: 25vh;
+}
+
+@media (min-width: 768px) {
+    #carouselIntroduction {
+        height: 50vh;
+    }
+}
+
+/* -----------------------------------------------GIỚI THIỆU----------------------------------------------- */
+/* line 6, ../scss/timeline.scss */
+.timeline,
+.timeline.v1 {
+    margin: 0px auto;
+    max-width: 700px;
+    overflow: hidden;
+    height: auto;
+    position: relative;
+    padding: 0px;
+    list-style-type: none;
+    /*thanks to
+       https://twitter.com/JacoKoster
+    */
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEElEQVQIW2NMTEz8z8gABAAPKwIlXWq1kgAAAABJRU5ErkJggg==);
+    background-repeat: repeat-y;
+    background-position: 50% 0;
+    /*
+      border-box ftw, inside .timeline now to prevent
+      screwing up your CSS rule if you are not using
+      border-box
+      if that's the case, I have nothing to say to you.
+  
+      thanks to https://github.com/jimmyandrade
+    */
+    /* 
+      elements 1,(2),3,(4), etc.
+      elements in brackets inherit these properties, some are overridden below (2n)
+      beginning at 0
+    */
+    /*v2*/
+}
+
+/* line 30, ../scss/timeline.scss */
+.timeline *,
+.timeline *:after,
+.timeline:after,
+.timeline *:before,
+.timeline:before,
+.timeline.v1 *,
+.timeline.v1 *:after,
+.timeline.v1:after,
+.timeline.v1 *:before,
+.timeline.v1:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* line 32, ../scss/timeline.scss */
+.timeline .year,
+.timeline.v1 .year {
+    background: #505050;
+    font-size: 2em;
+    max-width: 3em;
+    clear: both;
+    margin: 1em auto;
+    color: white;
+    border-radius: 30% / 100%;
+    text-align: center;
+    margin-top: 50px;
+    /*
+      thanks to Lukas Knuth ( https://github.com/christian-fei/Timeline.css/issues/1 )
+    */
+}
+
+/* line 43, ../scss/timeline.scss */
+.timeline .year:first-of-type,
+.timeline.v1 .year:first-of-type {
+    margin-top: 0 !important;
+}
+
+/* line 50, ../scss/timeline.scss */
+.timeline .year+.event,
+.timeline.v1 .year+.event {
+    margin-top: -1.5em;
+}
+
+/* line 60, ../scss/timeline.scss */
+.timeline .event,
+.timeline.v1 .event {
+    position: relative;
+    text-align: center;
+    float: right;
+    clear: right;
+    width: 45%;
+    margin: 10px 2.5%;
+    border-radius: 5px;
+    list-style-type: none;
+    display: block;
+    padding: .4em;
+    background: white;
+    z-index: 15;
+    color: #4d4d4d;
+    border: 1px solid #d0d0d0;
+    text-decoration: none;
+    -webkit-transition: background .15s linear;
+    -moz-transition: background .15s linear;
+    -ms-transition: background .15s linear;
+    -o-transition: background .15s linear;
+    transition: background .15s linear;
+}
+
+/* line 86, ../scss/timeline.scss */
+.timeline .event.featured,
+.timeline.v1 .event.featured {
+    width: 95% !important;
+}
+
+/* line 88, ../scss/timeline.scss */
+.timeline .event.featured:after,
+.timeline .event.featured:before,
+.timeline.v1 .event.featured:after,
+.timeline.v1 .event.featured:before {
+    display: none;
+}
+
+@media all and (max-width: 600px) {
+
+    /* line 60, ../scss/timeline.scss */
+    .timeline .event,
+    .timeline.v1 .event {
+        width: 85%;
+    }
+}
+
+/* line 97, ../scss/timeline.scss */
+.timeline .event.offset-first,
+.timeline.v1 .event.offset-first {
+    margin-top: -1.5em;
+}
+
+/* line 101, ../scss/timeline.scss */
+.timeline .event img,
+.timeline.v1 .event img {
+    margin-top: 10px;
+    max-width: 100%;
+}
+
+/* line 106, ../scss/timeline.scss */
+.timeline .event:hover,
+.timeline.v1 .event:hover {
+    background: #f6f6f6;
+}
+
+/* line 109, ../scss/timeline.scss */
+.timeline .event:hover:after,
+.timeline.v1 .event:hover:after {
+    background: #505050;
+}
+
+/* line 114, ../scss/timeline.scss */
+.timeline .event:nth-of-type(2n),
+.timeline.v1 .event:nth-of-type(2n) {
+    float: left;
+    clear: left;
+}
+
+/* line 117, ../scss/timeline.scss */
+.timeline .event:nth-of-type(2n):after,
+.timeline.v1 .event:nth-of-type(2n):after {
+    right: -5%;
+    /* reset the standard declaration I defined before*/
+    left: auto;
+}
+
+@media all and (min-width: 650px) {
+
+    /* line 124, ../scss/timeline.scss */
+    .timeline .event:after,
+    .timeline.v1 .event:after {
+        display: block;
+        content: ' ';
+        height: 9px;
+        width: 9px;
+        background: #9d9d9d;
+        border-radius: 50%;
+        position: absolute;
+        left: -5%;
+        top: 1.5em;
+        border: 2px solid white;
+    }
+}
+
+/* line 139, ../scss/timeline.scss */
+.timeline time,
+.timeline.v1 time {
+    display: block;
+    font-weight: bold;
+}
+
+/* line 148, ../scss/timeline.scss */
+.timeline.v2 .year,
+.timeline.v1.v2 .year {
+    background: white;
+    color: #505050;
+    border: 2px solid #505050;
+}
+
+/* line 154, ../scss/timeline.scss */
+.timeline.v2 .event,
+.timeline.v1.v2 .event {
+    border: none;
+    background: #FAFAFA;
+    border-bottom: 1px solid #cac4c4;
+}
+
+@media (max-width: 992px) {
+    .navbar .dropdown-menu {
+        position: absolute;
+        right: 0;
+        top: 100%; /* Hiển thị ngay bên dưới biểu tượng */
+        transform: translateY(10px);
+        min-width: 180px;
+        background-color: #fff; /* Chỉnh nền nếu cần */
+    }
+}
+
+/* -----------------------------------------------GIỎ HÀNG----------------------------------------------- */
+.tab-container .nav-tabs {
+    background-color: #f8f9fa;
+    border: none;
+}
+.tab-container .nav-item {
+    text-align: center;
+}
+.tab-container .nav-link {
+    border: none;
+    border-radius: 0;
+    color: #555;
+    padding: 12px 0;
+    background-color: #e9ecef;
+    transition: background-color 0.3s ease;
+}
+.tab-container .nav-link.active {
+    background-color: #8395a7;
+    color: #fff;
+}
+
+.order-row {
+    cursor: pointer;
+}
+.order-row:hover {
+    background-color: #f8f9fa;
+}
+
+/* Đánh giá sản phẩm */
+.star-rating i {
+    font-size: 1.5em;
+    color: #d3d3d3; /* màu ngôi sao chưa chọn */
+    cursor: pointer;
+}
+.star-rating i.active {
+    color: #ffc107; /* màu ngôi sao đã chọn */
+}
