@@ -1,22 +1,5 @@
 <!-- tab Đăng nhập -->
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>Assignment</title>
-        <meta charset="utf-8">
-        <meta name="description" content="Assignment">
-        <meta name="keywords" content="fashion thời trang">
-        <meta name="author" content="Pham Gia Luong">
-        <meta name="copyright" content="CSE HCMUT 2024">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=WindSong:wght@400;700&display=swap" rel="stylesheet"> <!-- font WindSong -->
-        <link href="https://fonts.googleapis.com/css2?family=Asap:wght@400;700&display=swap" rel="stylesheet"> <!--font Asap-->
-        <link href="/Assignment/style.css" rel="stylesheet">
-    </head>
-
-    <body class="vh-100 d-flex justify-content-center align-items-center">
+<?php include('../Header.php'); ?>
         <div class="col-12 d-flex flex-wrap justify-content-md-between justify-content-center p-3">
             <div class="col-3 d-md-block d-none d-flex flex-wrap align-items-end">
                 <img src="/Assignment/Images/left1.png" class="img-fluid" alt="left.png">
@@ -54,6 +37,5 @@
                 <img src="/Assignment/Images/right1.png" class="img-fluid" alt="right.png">
             </div>
         </div>
-    </body>
-
-</html>
+    
+<?php include('../Footer.php'); ?>

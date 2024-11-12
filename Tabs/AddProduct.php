@@ -2,7 +2,7 @@
 <!-- thêm sản phẩm mới -->
     <div class="container d-flex justify-content-center">
         <div class="col-md-5 col-10 p-2 m-3 border border-1 rounded-5">
-            <h1 class="col-12 text-center py-3">THÊM SẢN PHẨM MỚI</h1>
+            <h3 class="col-12 text-center py-3">THÊM SẢN PHẨM MỚI</h3>
             <form action="#" method="POST" class="m-3">
                 <div class="user-box">
                     <input type="text" id="name" name="name" required>

@@ -14,6 +14,8 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"> <!--icon google-->
         <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@400;700&display=swap" rel="stylesheet"> <!--font Signika Negative-->
         <link href="https://fonts.googleapis.com/css2?family=Asap:wght@400;700&display=swap" rel="stylesheet"> <!--font Asap-->
+        <link href="https://fonts.googleapis.com/css2?family=WindSong:wght@400;700&display=swap" rel="stylesheet"> <!-- font WindSong -->
+        <link href="https://fonts.googleapis.com/css2?family=Asap:wght@400;700&display=swap" rel="stylesheet"> <!--font Asap-->
         <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
         <link href="/Assignment/style.css" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery framework -->
@@ -52,10 +54,15 @@
                                 <a class="nav-link nlink px-2" href="/Assignment/Tabs/Manage.php" data-tab="manage">QUẢN LÝ</a>
                             </li>
                         </ul>
-                        <form class="d-flex" role="search">
-                            <input class="form-control me-2" id="searchInput" type="search" placeholder="Tìm kiếm" aria-label="Search" style="background-color: #fff; color: #000;">
-                            <!-- <a class="nav-link"><span class="material-icons-round" id="searchBtn">search</span></a> -->
+                        <form action="/Assignment/Tabs/search.php" method="GET" class="search">
+                            <div>
+                                <input type="text" name="query" placeholder="Tìm sản phẩm..." required>
+                            </div>
                         </form>
+                        <!-- <form class="d-flex" role="search">
+                            <input class="form-control me-2 opacity-75" id="searchInput" type="search" placeholder="Tìm kiếm" 
+                                aria-label="Search" style="background-color: #fff; color: #000;">
+                        </form> -->
                     </div>
                 </div>
                 <ul class="navbar-nav flex-row justify-content-end align-items-center flex-grow-1 gap-2">

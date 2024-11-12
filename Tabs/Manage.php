@@ -1,19 +1,13 @@
 <?php include('../Header.php'); ?>
 <!-- tab Quản lý -->
 <div class="container mt-3">
-    <!-- Thêm mới vào database -->
-    <div class="col-12 d-flex flex-wrap justify-content-between my-2">
-        <div class="col-md-3 col-12 text-center p-2" style="background-color: #222f3e;">
-            <a href="/Assignment/Tabs/AddUser.php" style="color: white;">Thêm thành viên mới</a>
-        </div>
-        <div class="col-md-3 col-12 text-center p-2" style="background-color: #222f3e;">
-            <a href="/Assignment/Tabs/AddProduct.php" style="color: white;">Thêm sản phẩm mới</a>
-        </div>
-    </div>
-
     <!-- Báo cáo tổng quan -->
+    <div class="col-12 d-flex align-items-center">
+        <h3>Thống kê hoạt động</h3>
+        <div style="height: 2px; background-color: #222f3e; flex-grow: 1;"></div>
+    </div>
     <div class="col-12 d-flex flex-wrap justify-content-between my-2">
-        <div class="col-md-3 col-12 border rounded-3 p-2 d-flex flex-wrap bg-secondary bg-opacity-25" >
+        <div class="col-md-3 col-12 border rounded-3 p-2 d-flex flex-wrap bg-secondary bg-opacity-25">
             <div class="col-3 bg-success d-flex justify-content-center align-items-center text-white">
                 <i class="bi bi-cash-stack fs-3"></i>
             </div>
@@ -22,8 +16,8 @@
                 <div>2 505 000VND</div>
             </div>
         </div>
-        
-        <div class="col-md-3 col-12 border rounded-3 p-2 d-flex flex-wrap bg-secondary bg-opacity-25" >
+
+        <div class="col-md-3 col-12 border rounded-3 p-2 d-flex flex-wrap bg-secondary bg-opacity-25">
             <div class="col-3 bg-primary d-flex justify-content-center align-items-center text-white">
                 <i class="bi bi-bag fs-3"></i>
             </div>
@@ -32,8 +26,8 @@
                 <div>5 214 sản phẩm</div>
             </div>
         </div>
-        
-        <div class="col-md-3 col-12 border rounded-3 p-2 d-flex flex-wrap bg-secondary bg-opacity-25" >
+
+        <div class="col-md-3 col-12 border rounded-3 p-2 d-flex flex-wrap bg-secondary bg-opacity-25">
             <div class="col-3 bg-info d-flex justify-content-center align-items-center text-white">
                 <i class="bi bi-person-add fs-3"></i>
             </div>
@@ -51,7 +45,7 @@
     </div>
     <!-- Thống kê trạng thái các đơn hàng -->
     <div class="col-12 d-flex flex-wrap justify-content-between my-2">
-        <div class="col-md-3 col-12 border rounded-3 p-2 d-flex flex-wrap bg-secondary bg-opacity-25" >
+        <div class="col-md-3 col-12 border rounded-3 p-2 d-flex flex-wrap bg-secondary bg-opacity-25">
             <div class="col-3 bg-danger d-flex justify-content-center align-items-center text-white">
                 <i class="bi bi-bag fs-3"></i>
             </div>
@@ -60,8 +54,8 @@
                 <div>15 đơn</div>
             </div>
         </div>
-        
-        <div class="col-md-3 col-12 border rounded-3 p-2 d-flex flex-wrap bg-secondary bg-opacity-25" >
+
+        <div class="col-md-3 col-12 border rounded-3 p-2 d-flex flex-wrap bg-secondary bg-opacity-25">
             <div class="col-3 bg-warning d-flex justify-content-center align-items-center text-white">
                 <i class="bi bi-bag-dash fs-3"></i>
             </div>
@@ -70,8 +64,8 @@
                 <div>30 đơn</div>
             </div>
         </div>
-        
-        <div class="col-md-3 col-12 border rounded-3 p-2 d-flex flex-wrap bg-secondary bg-opacity-25" >
+
+        <div class="col-md-3 col-12 border rounded-3 p-2 d-flex flex-wrap bg-secondary bg-opacity-25">
             <div class="col-3 bg-success d-flex justify-content-center align-items-center text-white">
                 <i class="bi bi-bag-check fs-3"></i>
             </div>
@@ -161,6 +155,85 @@
             <?php endforeach; ?>
         </tbody>
     </table>
+
+    <!-- Thêm mới vào database -->
+    <div class="col-12 d-flex align-items-center">
+        <h3>Quản lý dữ liệu</h3>
+        <div style="height: 2px; background-color: #222f3e; flex-grow: 1;"></div>
+    </div>
+    <div class="col-12 d-flex flex-wrap justify-content-between my-2">
+        <div class="col-md-3 col-12 text-center p-2" style="background-color: #222f3e;">
+            <a href="/Assignment/Tabs/AddUser.php" style="color: white;">
+                <i class="bi bi-person-plus fs-4"></i> Thêm thành viên mới
+            </a>
+        </div>
+        <div class="col-md-3 col-12 text-center p-2" style="background-color: #222f3e;">
+            <a href="/Assignment/Tabs/AddProduct.php" style="color: white;">
+                <i class="bi bi-database-add fs-4"></i> Thêm sản phẩm mới
+            </a>
+        </div>
+    </div>
+
+    <?php
+        $proData = [
+            [
+                "id" => 1,
+                "image" => "images/product1.jpg", // Đường dẫn đến hình ảnh sản phẩm
+                "name" => "Sản phẩm 1",
+                "description" => "Mô tả chi tiết sản phẩm 1",
+                "price" => 100000, // Giá sản phẩm
+                "stock" => 50 // Số lượng tồn kho
+            ],
+            [
+                "id" => 2,
+                "image" => "images/product2.jpg",
+                "name" => "Sản phẩm 2",
+                "description" => "Mô tả chi tiết sản phẩm 2",
+                "price" => 150000,
+                "stock" => 30
+            ],
+            [
+                "id" => 3,
+                "image" => "images/product3.jpg",
+                "name" => "Sản phẩm 3",
+                "description" => "Mô tả chi tiết sản phẩm 3",
+                "price" => 200000,
+                "stock" => 20
+            ],
+            // Thêm các sản phẩm khác tương tự
+        ];
+    ?>
+
+    <table class="table text-start table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>Id</th>
+                <th>Hình ảnh</th>
+                <th>Tên sản phẩm</th>
+                <th>Mô tả</th>
+                <th>Giá</th>
+                <th>Tồn kho</th>
+                <th>Hành động</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($proData as $item): ?>
+                <tr style="vertical-align: middle;">
+                    <td><?= $item['id']; ?></td>
+                    <td><img src="<?= $item['image']; ?>" alt="<?= $item['name']; ?>" style="width: 60px;"></td>
+                    <td><?= $item['name']; ?></td>
+                    <td><?= $item['description']; ?></td>
+                    <td><?= number_format($item['price'], 0, ',', '.') . ' VND'; ?></td>
+                    <td><?= $item['stock']; ?></td>
+                    <td class="d-flex gap-2 border-0">
+                        <a class="btn btn-danger" href="d.php?id=<?= $sp['id']; ?>"><i class="bi bi-trash"></i></a>
+                        <a class="btn btn-primary" href="c.php?id=<?= $sp['id']; ?>"><i class="bi bi-pencil-square"></i></a>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+
 
 </div>
 

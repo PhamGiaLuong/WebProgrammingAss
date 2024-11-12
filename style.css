@@ -16,6 +16,7 @@ a {
     border: 1px solid white;
     border-radius: 20px;
 }
+
 .border-b {
     color: black;
     text-decoration: none;
@@ -23,7 +24,8 @@ a {
     border-radius: 20px;
 }
 
-.border-a:hover, .border-b:hover {
+.border-a:hover,
+.border-b:hover {
     font-weight: bold;
 }
 
@@ -31,7 +33,7 @@ a {
 .back-to-top {
     position: fixed;
     bottom: 20px;
-    right: 20px; 
+    right: 20px;
     background-color: #222f3e;
     color: white;
     border: none;
@@ -52,31 +54,83 @@ a {
 
 /* Giới hạn văn bản hiển thị */
 .truncate-1 {
-    overflow: hidden; 
-    text-overflow: ellipsis; 
-    white-space: nowrap;   
-    max-height: 50px;  
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-height: 50px;
 }
 
 .truncate-3 {
-    overflow: hidden;          
-    text-overflow: ellipsis;  
+    overflow: hidden;
+    text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 3; 
-    -webkit-box-orient: vertical; 
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+/* Search button */
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
+.search {
+    margin: auto;
+}
+
+.search>div {
+    display: inline-block;
+    position: relative;
+    filter: drop-shadow(0 1px #0091c2);
+}
+
+.search>div:after {
+    content: "";
+    background: white;
+    width: 2px;
+    height: 10px;
+    position: absolute;
+    top: 19px;
+    right: 0px;
+    transform: rotate(135deg);
+}
+
+.search>div>input {
+    color: white;
+    font-size: 14px;
+    background: transparent;
+    width: 25px;
+    height: 25px;
+    padding: 10px;
+    border: solid 2px white;
+    outline: none;
+    border-radius: 35px;
+    transition: width 0.5s;
+}
+
+.search>div>input::placeholder {
+    color: #efefef;
+    opacity: 0;
+    transition: opacity 150ms ease-out;
+}
+
+.search>div>input:focus::placeholder {
+    opacity: 1;
+}
+
+.search>div>input:focus,
+.search>div>input:not(:placeholder-shown) {
+    width: 250px;
 }
 
 /* -----------------------------------------------TAB ĐĂNG NHẬP/KÝ----------------------------------------------- */
-.signInTab{
-    background-image: url("/Assignment/1.png") ;
+.signInTab {
+    background-image: url("/Assignment/1.png");
     background-repeat: no-repeat;
     height: 650px;
     /* background-color: #010f11; */
     background-size: contain;
     background-position: center;
 }
-.signUpTab{
-    background-image: url("/Assignment/2.png") ;
+
+.signUpTab {
+    background-image: url("/Assignment/2.png");
     background-repeat: no-repeat;
     height: 650px;
     /* background-color: #010f11; */
@@ -117,8 +171,8 @@ a {
     transition: 0.5s;
 }
 
-.user-box input:focus ~ label,
-.user-box input:valid ~ label {
+.user-box input:focus~label,
+.user-box input:valid~label {
     top: -20px;
     left: 0;
     color: #222f3e;
@@ -194,13 +248,15 @@ a {
 }
 
 .product-image {
-    height: 400px; /* Chiều cao mặc định cho màn hình lớn */
+    height: 400px;
+    /* Chiều cao mặc định cho màn hình lớn */
 }
 
 /* Media query cho chiều cao 200px trên màn hình nhỏ */
 @media (max-width: 576px) {
     .product-image {
-        height: 200px; /* Chiều cao cho màn hình nhỏ */
+        height: 200px;
+        /* Chiều cao cho màn hình nhỏ */
     }
 }
 
@@ -425,10 +481,12 @@ a {
     .navbar .dropdown-menu {
         position: absolute;
         right: 0;
-        top: 100%; /* Hiển thị ngay bên dưới biểu tượng */
+        top: 100%;
+        /* Hiển thị ngay bên dưới biểu tượng */
         transform: translateY(10px);
         min-width: 180px;
-        background-color: #fff; /* Chỉnh nền nếu cần */
+        background-color: #fff;
+        /* Chỉnh nền nếu cần */
     }
 }
 
@@ -437,9 +495,11 @@ a {
     background-color: #f8f9fa;
     border: none;
 }
+
 .tab-container .nav-item {
     text-align: center;
 }
+
 .tab-container .nav-link {
     border: none;
     border-radius: 0;
@@ -448,6 +508,7 @@ a {
     background-color: #e9ecef;
     transition: background-color 0.3s ease;
 }
+
 .tab-container .nav-link.active {
     background-color: #8395a7;
     color: #fff;
@@ -456,6 +517,7 @@ a {
 .order-row {
     cursor: pointer;
 }
+
 .order-row:hover {
     background-color: #f8f9fa;
 }
@@ -463,9 +525,12 @@ a {
 /* Đánh giá sản phẩm */
 .star-rating i {
     font-size: 1.5em;
-    color: #d3d3d3; /* màu ngôi sao chưa chọn */
+    color: #d3d3d3;
+    /* màu ngôi sao chưa chọn */
     cursor: pointer;
 }
+
 .star-rating i.active {
-    color: #ffc107; /* màu ngôi sao đã chọn */
+    color: #ffc107;
+    /* màu ngôi sao đã chọn */
 }

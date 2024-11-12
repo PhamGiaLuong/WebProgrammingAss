@@ -129,7 +129,7 @@
     
 
 <!-- Hiển thị sản phẩm -->
-    <div class="col-md-10 col-12 p-2">
+    <div class="displayProduct col-md-10 col-12 p-2">
         <h2 class="text-center my-3">Sản Phẩm</h2>
         <!-- Product Grid -->
         <div class="row">

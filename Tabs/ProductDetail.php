@@ -93,8 +93,8 @@
             </ul>
             <div class="tab-content p-3" id="productTabsContent">
                 <!-- Tab Hình ảnh sản phẩm -->
-                <div class="tab-pane fade show active" id="productImages" role="tabpanel" aria-labelledby="productImages-tab">
-                    <div class="d-flex flex-column">
+                <div class="tab-pane fade show active d-flex justify-content-center" id="productImages" role="tabpanel" aria-labelledby="productImages-tab">
+                    <div class="d-flex flex-column col-md-8 col-12">
                         <img src="https://cdn2.yame.vn/pimg/ao-so-mi-co-be-tay-ngan-soi-nhan-tao-tham-hut-bieu-tuong-dang-rong-on-gian-seventy-seven-22-0023256/c78dc017-9d42-dd00-b203-001b3f0898db.jpg?w=540&h=756" class="mb-2" alt="Product Image 1">
                         <img src="https://cdn2.yame.vn/pimg/ao-khoac-bomber-premium-34-0022615/08583102-08d6-1300-22f0-001ad42f4b5d.jpg?w=540&h=756" class="mb-2" alt="Product Image 2">
                         <img src="https://cdn2.yame.vn/pimg/ao-khoac-bomber-premium-34-0022615/08583102-08d6-1300-22f0-001ad42f4b5d.jpg?w=540&h=756" class="mb-2" alt="Product Image 3">
