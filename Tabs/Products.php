@@ -1,5 +1,8 @@
 <?php include('../Header.php'); ?>
-
+<!-- Mũi tên quay về đầu trang -->
+<div id="backToTop" class="back-to-top">
+  <i class="bi bi-arrow-up-circle text-white fs-3"></i>
+</div>
 <!-- tab Sản phẩm -->
 <div class="container d-flex flex-wrap">
     <!-- Bộ lọc kết quả hiển thị sản phẩm -->
@@ -130,7 +133,7 @@
 
 <!-- Hiển thị sản phẩm -->
     <div class="displayProduct col-md-10 col-12 p-2">
-        <h2 class="text-center my-3">Sản Phẩm</h2>
+        <h1 class="text-center my-3">Sản Phẩm</h1>
         <!-- Product Grid -->
         <div class="row">
             <?php
@@ -221,21 +224,21 @@
         <nav aria-label="Page navigation example" style="margin-top: 20px;">
             <ul class="pagination justify-content-center">
                 <li class="page-item <?= ($current_page == 1) ? 'disabled' : ''; ?>">
-                    <a class="page-link" href="<?= ($current_page > 1) ? '?page=' . ($current_page - 1) : '#'; ?>" style="background-color: <?= ($current_page == 1) ? '#ccc' : '#576574'; ?>; color: white;">
+                    <a class="page-link" href="<?= ($current_page > 1) ? '?page=' . ($current_page - 1) : '#'; ?>" style="background-color: <?= ($current_page == 1) ? '#ccc' : '#222f3e'; ?>; color: white;">
                         Previous
                     </a>
                 </li>
 
                 <?php for ($i = 1; $i <= $total_pages; $i++): ?>
                     <li class="page-item <?= ($i == $current_page) ? 'active' : ''; ?>">
-                        <a class="page-link" href="?page=<?= $i; ?>" style="background-color: <?= ($i == $current_page) ? '#576574' : 'white'; ?>; color: <?= ($i == $current_page) ? 'white' : '#576574'; ?>;">
+                        <a class="page-link" href="?page=<?= $i; ?>" style="background-color: <?= ($i == $current_page) ? '#222f3e' : 'white'; ?>; color: <?= ($i == $current_page) ? 'white' : '#222f3e'; ?>;">
                             <?= $i; ?>
                         </a>
                     </li>
                 <?php endfor; ?>
 
                 <li class="page-item <?= ($current_page == $total_pages) ? 'disabled' : ''; ?>">
-                    <a class="page-link" href="<?= ($current_page < $total_pages) ? '?page=' . ($current_page + 1) : '#'; ?>" style="background-color: <?= ($current_page == $total_pages) ? '#ccc' : '#576574'; ?>; color: white;">
+                    <a class="page-link" href="<?= ($current_page < $total_pages) ? '?page=' . ($current_page + 1) : '#'; ?>" style="background-color: <?= ($current_page == $total_pages) ? '#ccc' : '#222f3e'; ?>; color: white;">
                         Next
                     </a>
                 </li>

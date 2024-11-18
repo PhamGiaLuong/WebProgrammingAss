@@ -1,7 +1,7 @@
 <?php include('../Header.php'); ?>
 <!-- giỏ hàng -->
 <div class="container my-3">
-    <h2 class="text-center mb-4">Giỏ Hàng Của Bạn</h2>
+    <h1 class="text-center mb-4">Giỏ Hàng Của Bạn</h1>
     <!-- Thông tin đặt hàng -->
     <div class="col-12">
         <div class="col-12 px-2 d-flex flex-wrap">

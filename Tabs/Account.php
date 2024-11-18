@@ -1,5 +1,5 @@
 <?php include('../Header.php'); ?>
-    <!-- chưa có liên kết đến trang này, trang hiển thị thông tin người dùng -->
+    <!-- Nếu người dùng chưa đăng nhập thì chuyển đến SignIn.php -->
     <div class="container d-flex justify-content-center">
         <div class="col-7">
             <h1 class="col-12 text-center py-3">THÔNG TIN TÀI KHOẢN</h1>

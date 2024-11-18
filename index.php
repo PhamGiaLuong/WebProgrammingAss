@@ -148,6 +148,7 @@
         <h5 class="card-title truncate-1">Tiêu đề bài viết</h5>
         <p class="card-text text-muted">Ngày tạo: 2024-11-03</p>
         <p class="card-text truncate-3">Đoạn nhỏ nội dung của bài viết này sẽ được hiển thị ở đây, cung cấp cho người đọc một phần giới thiệu ngắn gọn mà không quá dài, nếu không sẽ bị ẩn đi.</p>
+        <!-- Chuyển đến link gốc bài báo -->
         <a href="#" class="btn col-12 text-end">Đọc thêm <i class="bi bi-arrow-right-circle"></i></a>
     </div>
   </div>
