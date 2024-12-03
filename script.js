@@ -1,68 +1,70 @@
-document.addEventListener("DOMContentLoaded", function () {
-  // Fade-in annimation
-  const fadeIns = document.querySelectorAll(".fade-in");
+$(document).ready(function () {
+  // Fade-in animation
+  const fadeIns = $(".fade-in");
 
   function handleScroll() {
-    fadeIns.forEach((fadeIn) => {
-      const rect = fadeIn.getBoundingClientRect();
-      if (rect.top < window.innerHeight && rect.bottom >= 0) {
-        fadeIn.classList.add("visible");
+    fadeIns.each(function () {
+      const rect = this.getBoundingClientRect();
+      if (rect.top < $(window).height() && rect.bottom >= 0) {
+        $(this).addClass("visible");
       }
     });
   }
 
-  window.addEventListener("scroll", handleScroll);
+  $(window).on("scroll", handleScroll);
   handleScroll();
 
   // Đánh giá sản phẩm
-  const stars = document.querySelectorAll("#starRating i");
-  const ratingInput = document.getElementById("reviewRating");
+  const stars = $("#starRating i");
+  const ratingInput = $("#reviewRating");
 
-  stars.forEach(star => {
-    star.addEventListener("click", () => {
-      const rating = star.getAttribute("data-value");
-      ratingInput.value = rating;
+  stars.on("click", function () {
+    const rating = $(this).data("value");
+    ratingInput.val(rating);
 
-      // Xóa class active cho tất cả các ngôi sao
-      stars.forEach(s => s.classList.remove("active"));
+    // Xóa class active cho tất cả các ngôi sao
+    stars.removeClass("active");
 
-      // Thêm class active cho các ngôi sao từ 1 đến số được chọn
-      for (let i = 0; i < rating; i++) {
-        stars[i].classList.add("active");
-      }
-    });
+    // Thêm class active cho các ngôi sao từ 1 đến số được chọn
+    for (let i = 0; i < rating; i++) {
+      $(stars[i]).addClass("active");
+    }
   });
-
-
 });
-// lựa chọn "khác" về BST khi thêm sản phẩm mới
+
+// Xử lý khi người dùng chọn Lựa chọn "khác"
 function toggleOtherInput() {
-  var select = document.getElementById("collection");
-  var otherInput = document.getElementById("otherCollection");
-  if (select.value === "other") {
-    otherInput.style.display = "block"; // Hiển thị ô nhập liệu
-    otherInput.required = true; // Đặt ô nhập là bắt buộc
+  var $select = $("#collection");
+  var $otherInput = $("#otherCollection");
+
+  if ($select.val() === "other") {
+    $otherInput.show(); // Hiển thị ô nhập liệu
+    $otherInput.prop("required", true); // Đặt ô nhập là bắt buộc
   } else {
-    otherInput.style.display = "none"; // Ẩn ô nhập liệu
-    otherInput.required = false; // Bỏ yêu cầu bắt buộc khi ẩn
-    otherInput.value = ""; // Xóa giá trị trong ô nhập khi không cần thiết
+    $otherInput.hide(); // Ẩn ô nhập liệu
+    $otherInput.prop("required", false); // Bỏ yêu cầu bắt buộc khi ẩn
+    $otherInput.val(""); // Xóa giá trị trong ô nhập khi không cần thiết
   }
 }
 
-// Hiển thị mũi tên trở về đầu trang khi cuộn xuống
-window.onscroll = function () {
-  const backToTopButton = document.getElementById('backToTop');
-  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-    backToTopButton.style.display = "block";
-  } else {
-    backToTopButton.style.display = "none";
-  }
-};
-// Cuộn về đầu trang khi nhấn vào nút
-document.getElementById('backToTop').addEventListener('click', function (event) {
-  event.preventDefault(); // Ngăn chặn hành động mặc định
-  window.scrollTo({ top: 0, behavior: 'smooth' }); // Cuộn về đầu trang với hiệu ứng mượt mà
+
+$(document).ready(function () {
+  // Hiển thị mũi tên trở về đầu trang khi cuộn xuống
+  $(window).scroll(function () {
+    const $backToTopButton = $("#backToTop");
+    if ($(document).scrollTop() > 100) {
+      $backToTopButton.show(); // Hiển thị nút
+    } else {
+      $backToTopButton.hide(); // Ẩn nút
+    }
+  });
+  // Cuộn về đầu trang khi nhấn vào nút
+  $("#backToTop").click(function (event) {
+    event.preventDefault(); // Ngăn chặn hành động mặc định
+    $("html, body").animate({ scrollTop: 0 }, "smooth"); // Cuộn về đầu trang với hiệu ứng mượt mà
+  });
 });
+
 
 
 document.getElementById('searchBtn').addEventListener('click', function () {
@@ -118,3 +120,16 @@ decreaseBtn.addEventListener('click', () => {
     quantityInput.value = parseInt(quantityInput.value) - 1;
   }
 });
+
+
+// // Update active state of Tabs on Navigation bar
+// const currentUrl = window.location.pathname;
+// const navLinks = document.querySelectorAll('.nlink');
+// navLinks.forEach(link => {
+//     if (link.href === window.location.href) {
+//         link.classList.add('active');
+//         link.setAttribute('aria-current', 'page');
+//     } else {
+//         link.classList.remove('active');
+//     }
+// });

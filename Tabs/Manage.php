@@ -277,7 +277,7 @@
         <!-- Tab Danh sách thành viên -->
         <div class="tab-pane fade" id="members-list">
             <div class="col-md-3 col-12 text-center p-2 mb-2" style="background-color: #222f3e;">
-                <a href="/Assignment/Tabs/AddUser.php" style="color: white;">
+                <a href="/fashion.com/them-nhan-vien" style="color: white;">
                     <i class="bi bi-person-plus fs-4"></i> Thêm nhân viên mới
                 </a>
             </div>
@@ -290,7 +290,7 @@
         <!-- Tab Danh sách sản phẩm -->
         <div class="tab-pane fade" id="products-list">
             <div class="col-md-3 col-12 text-center p-2 mb-2" style="background-color: #222f3e;">
-                <a href="/Assignment/Tabs/AddProduct.php" style="color: white;">
+                <a href="/fashion.com/them-san-pham" style="color: white;">
                     <i class="bi bi-database-add fs-4"></i> Thêm sản phẩm mới
                 </a>
             </div>

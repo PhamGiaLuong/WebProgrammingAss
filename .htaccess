@@ -1,0 +1,79 @@
+# Đặt file này vào thư mục web root
+Options -Indexes
+
+RewriteEngine On
+
+# Quy tắc: ánh xạ URL đẹp tới URL gốc
+
+# Khi người dùng truy cập /fashion.com/home
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/Assignment/index\.php [NC]
+RewriteRule ^Assignment/index\.php$ /fashion.com/trang-chu [R=301,L]
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/fashion\.com [NC]
+RewriteRule ^fashion\.com$ /fashion.com/trang-chu [R=301,L]
+
+RewriteRule ^fashion.com/trang-chu$ /Assignment/index.php [L]
+
+# Khi người dùng truy cập /fashion.com/productdetail
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/Assignment/Tabs/ProductDetail\.php [NC]
+RewriteRule ^Assignment/Tabs/ProductDetail\.php$ /fashion.com/san-pham/chi-tiet [R=301,L]
+RewriteRule ^fashion.com/san-pham/chi-tiet$ /Assignment/Tabs/ProductDetail.php [L]
+
+# Khi người dùng truy cập /fashion.com/products
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/Assignment/Tabs/Products\.php [NC]
+RewriteRule ^Assignment/Tabs/Products\.php$ /fashion.com/san-pham [R=301,L]
+RewriteRule ^fashion.com/san-pham$ /Assignment/Tabs/Products.php [L]
+
+# Khi người dùng truy cập /fashion.com/addproduct
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/Assignment/Tabs/AddProduct\.php [NC]
+RewriteRule ^Assignment/Tabs/AddProduct\.php$ /fashion.com/them-san-pham [R=301,L]
+RewriteRule ^fashion.com/them-san-pham$ /Assignment/Tabs/AddProduct.php [L]
+
+# Khi người dùng truy cập /fashion.com/introduction
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/Assignment/Tabs/Introduction\.php [NC]
+RewriteRule ^Assignment/Tabs/Introduction\.php$ /fashion.com/gioi-thieu [R=301,L]
+RewriteRule ^fashion.com/gioi-thieu$ /Assignment/Tabs/Introduction.php [L]
+
+# Khi người dùng truy cập /fashion.com/contact
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/Assignment/Tabs/Contact\.php [NC]
+RewriteRule ^Assignment/Tabs/Contact\.php$ /fashion.com/lien-he [R=301,L]
+RewriteRule ^fashion.com/lien-he$ /Assignment/Tabs/Contact.php [L]
+
+# Khi người dùng truy cập /fashion.com/manage
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/Assignment/Tabs/Manage\.php [NC]
+RewriteRule ^Assignment/Tabs/Manage\.php$ /fashion.com/quan-ly [R=301,L]
+RewriteRule ^fashion.com/quan-ly$ /Assignment/Tabs/Manage.php [L]
+
+# Khi người dùng truy cập /fashion.com/adduser
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/Assignment/Tabs/AddUser\.php [NC]
+RewriteRule ^Assignment/Tabs/AddUser\.php$ /fashion.com/them-nhan-vien [R=301,L]
+RewriteRule ^fashion.com/them-nhan-vien$ /Assignment/Tabs/AddUser.php [L]
+
+# Khi người dùng truy cập /fashion.com/cart
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/Assignment/Tabs/Cart\.php [NC]
+RewriteRule ^Assignment/Tabs/Cart\.php$ /fashion.com/gio-hang [R=301,L]
+RewriteRule ^fashion.com/gio-hang$ /Assignment/Tabs/Cart.php [L]
+
+# Khi người dùng truy cập /fashion.com/orderhistory
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/Assignment/Tabs/OrderHistory\.php [NC]
+RewriteRule ^Assignment/Tabs/OrderHistory\.php$ /fashion.com/lich-su-don-hang [R=301,L]
+RewriteRule ^fashion.com/lich-su-don-hang$ /Assignment/Tabs/OrderHistory.php [L]
+
+# Khi người dùng truy cập /fashion.com/account
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/Assignment/Tabs/Account\.php [NC]
+RewriteRule ^Assignment/Tabs/Account\.php$ /fashion.com/tai-khoan [R=301,L]
+RewriteRule ^fashion.com/tai-khoan$ /Assignment/Tabs/Account.php [L]
+
+# Khi người dùng truy cập /fashion.com/signinOption
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/Assignment/Tabs/SignInOption\.php [NC]
+RewriteRule ^Assignment/Tabs/SignInOption\.php$ /fashion.com/dang-nhap/option [R=301,L]
+RewriteRule ^fashion.com/dang-nhap/option$ /Assignment/Tabs/SignInOption.php [L]
+
+# Khi người dùng truy cập /fashion.com/signin
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/Assignment/Tabs/SignIn\.php [NC]
+RewriteRule ^Assignment/Tabs/SignIn\.php$ /fashion.com/dang-nhap [R=301,L]
+RewriteRule ^fashion.com/dang-nhap$ /Assignment/Tabs/SignIn.php [L]
+
+# Khi người dùng truy cập /fashion.com/signup
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/Assignment/Tabs/SignUp\.php [NC]
+RewriteRule ^Assignment/Tabs/SignUp\.php$ /fashion.com/dang-ky [R=301,L]
+RewriteRule ^fashion.com/dang-ky$ /Assignment/Tabs/SignUp.php [L]

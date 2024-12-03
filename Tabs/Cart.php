@@ -24,7 +24,7 @@
     <!-- Nút nhấn chuyển đến lịch sử mua hàng -->
     <div class="col-12 d-flex justify-content-end">
         <div class="col-md-3 col-6 text-center p-2" style="background-color: #222f3e;">
-            <a href="/Assignment/Tabs/OrderHistory.php" style="color: white;"><i class="bi bi-receipt-cutoff"></i> Xem lịch sử đơn hàng</a>
+            <a href="/fashion.com/lich-su-don-hang" style="color: white;"><i class="bi bi-receipt-cutoff"></i> Xem lịch sử đơn hàng</a>
         </div>
     </div>
 

@@ -40,19 +40,19 @@
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                             <li class="nav-item">
-                                <a class="nav-link nlink active px-2" aria-current="page" href="/Assignment/index.php" data-tab="home">TRANG CHỦ</a>
+                                <a class="nav-link nlink active px-2" aria-current="page" href="/fashion.com/trang-chu" data-tab="home">TRANG CHỦ</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link nlink px-2" href="/Assignment/Tabs/Products.php" data-tab="product">SẢN PHẨM</a>
+                                <a class="nav-link nlink px-2" href="/fashion.com/san-pham" data-tab="product">SẢN PHẨM</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link nlink px-2" href="/Assignment/Tabs/Introduction.php" data-tab="introduction">VỀ CHÚNG TÔI</a>
+                                <a class="nav-link nlink px-2" href="/fashion.com/gioi-thieu" data-tab="introduction">VỀ CHÚNG TÔI</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link nlink px-2" href="/Assignment/Tabs/Contact.php" data-tab="contact">LIÊN HỆ</a>
+                                <a class="nav-link nlink px-2" href="/fashion.com/lien-he" data-tab="contact">LIÊN HỆ</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link nlink px-2" href="/Assignment/Tabs/Manage.php" data-tab="manage">QUẢN LÝ</a>
+                                <a class="nav-link nlink px-2" href="quan-ly" data-tab="manage">QUẢN LÝ</a>
                             </li>
                         </ul>
                         <form action="/Assignment/Tabs/search.php" method="GET" class="search">
@@ -68,7 +68,7 @@
                 </div>
                 <ul class="navbar-nav flex-row justify-content-end align-items-center flex-grow-1 gap-2">
                     <li class="nav-item">
-                        <a class="nav-link position-relative" href="/Assignment/Tabs/Cart.php">
+                        <a class="nav-link position-relative" href="/fashion.com/gio-hang">
                             <span class="material-icons-round text-white">shopping_cart</span>
                             <span class="position-absolute top-10 start-90 translate-middle badge rounded-pill bg-danger">
                                 0
@@ -77,7 +77,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/Assignment/Tabs/Account.php">
+                        <a class="nav-link" href="/fashion.com/tai-khoan">
                             <span class="material-icons-round text-white">account_circle</span>
                         </a>
                     </li>
